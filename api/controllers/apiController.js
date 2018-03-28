@@ -12,9 +12,22 @@ exports.get_app_details = function (request, response) {
         });
 };
 
-exports.get_apps = function (request, response) {
+exports.get_all_apps = function (request, response) {
     gplay.developer({devId: "MoH Kenya"}).then(function(res){
         response.send(res);
+    });
+};
+
+exports.get_specific_apps = function (request, response){
+    gplay.developer({devId: "MoH Kenya"}).then(function(res){
+        var specificApps = [];
+        res.forEach(function(app){
+            if (app.appId != request.params.appId) {
+                specificApps.push(app);
+            }
+        });
+
+        response.json(specificApps);
     });
 };
 
