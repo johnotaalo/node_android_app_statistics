@@ -1,0 +1,25 @@
+{
+  "name": "google_app_apis",
+  "version": "1.0.0",
+  "description": "RESTful API for play store analytics",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"\"\u001b[DError: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "CHAI",
+    "PlayStore"
+  ],
+  "author": "Chrispine Otaalo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "google-play-scraper": "^5.0.0"
+  }
+}
